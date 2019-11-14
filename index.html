@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Video.js 5 -->
-<link href="http://vjs.zencdn.net/5.4.6/video-js.css" rel="stylesheet">
-<script src="http://vjs.zencdn.net/5.4.6/video.js"></script>
+  <link href="https://vjs.zencdn.net/7.6.5/video-js.css" rel="stylesheet">
+  <link href="/libs/videojs.vast.vpaid.css" rel="stylesheet">
 
-<link href="/libs/videojs.vast.vpaid.css" rel="stylesheet">
-<script src="/libs/videojs_5.vast.vpaid.js"></script>
-
+  <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+  <script src='https://vjs.zencdn.net/7.6.5/video.js'></script>
+  
+  <script src="/libs/videojs_5.vast.vpaid.min.js"></script>
+  <script src="/libs/videojs_5.vast.vpaid.min.js.map"></script>
 
 </head>
 <body>
@@ -18,14 +20,10 @@
     videojs.plugin('ads-setup', function (opts) {
         var player = this;
         var adsCancelTimeout = 3000;
-
-        var vastAd = player.vastClient({
-        //Media tag URL
-        adTagUrl: "https://ads.adfox.ru/275464/getCode?p1=cdxbp&p2=ghrm",
-        playAdAlways: true,
-        //Note: As requested we set the preroll timeout at the same place than the adsCancelTimeout
-        adCancelTimeout: adsCancelTimeout,
-        adsEnabled: !!options.adsEnabled
+          var vastAd = player.vastClient({
+          playAdAlways: true,
+          adCancelTimeout: adsCancelTimeout,
+          adsEnabled: !!options.adsEnabled
         });
     });
     </script>
@@ -45,10 +43,6 @@
   <source src="http://vjs.zencdn.net/v/oceans.mp4" type='video/mp4'/>
   <source src="http://vjs.zencdn.net/v/oceans.webm" type='video/webm'/>
   <source src="http://vjs.zencdn.net/v/oceans.ogv" type='video/ogg'/>
-  <p class="vjs-no-js">
-    To view this video please enable JavaScript, and consider upgrading to a web browser that
-    <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-  </p>
 </video>
 </body>
 </html>

@@ -1,6 +1,10 @@
+.vjs-big-play-button {
+  transform: translate(-50%, -50%)!important;
+  top: 50%!important;
+  left: 50%!important;
+}
 .vjs-label-hidden {
   display: none !important; }
-
 .vjs-default-skin div.vjs-ads-label {
   font-size: 13px;
   line-height: 30px;
@@ -10,10 +14,9 @@
   display: none;
   width: auto;
   padding-left: 10px; }
-
 .vjs-ad-playing .vjs-control.vjs-ads-label {
   display: block; }
-
+  
 .vjs-black-poster {
   position: absolute;
   top: 0;
